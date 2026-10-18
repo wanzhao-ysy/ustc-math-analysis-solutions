@@ -779,6 +779,21 @@
         f(x) > f(0) = 0 \implies \tan x > x - \frac{x^3}{3}.
     \end{equation}
 
+    \begin{note}{关于第 (2) 问不等式的说明}{Note-Tan-Inequality-Correction}
+        原书第 (2) 问印为 $\tan x > x - \frac{x^3}{3}$，此式显然成立，但结论较弱．由 Taylor 展开式 $\tan x = x + \frac{x^3}{3} + \frac{2x^5}{15} + o(x^5)$ 可知，原题应是印刷笔误将加号误印为减号，更有意义且更紧的不等式应为
+        \begin{equation}
+            \tan x > x + \frac{x^3}{3}, \quad x \in \left(0, \frac{\uppi}{2}\right).
+        \end{equation}
+        该更强不等式的证明如下：构造辅助函数 $g(x) = \tan x - x - \frac{x^3}{3}$（$x \in \left[0, \frac{\uppi}{2}\right)$），则 $g(0) = 0$．求导得
+        \begin{equation}
+            g'(x) = \sec^2 x - 1 - x^2 = \tan^2 x - x^2.
+        \end{equation}
+        当 $x \in \left(0, \frac{\uppi}{2}\right)$ 时，由基础不等式 $\tan x > x > 0$ 可得 $\tan^2 x - x^2 > 0$，即 $g'(x) > 0$．从而 $g(x)$ 在 $\left[0, \frac{\uppi}{2}\right)$ 上严格单调递增，故
+        \begin{equation}
+            g(x) > g(0) = 0 \implies \tan x > x + \frac{x^3}{3}.
+        \end{equation}
+    \end{note}
+
     \ansitem{3}
 
     考虑函数 $f(x) = \frac{\tan x}{x}$（$x \in \left(0, \frac{\uppi}{2}\right)$）．求导得
