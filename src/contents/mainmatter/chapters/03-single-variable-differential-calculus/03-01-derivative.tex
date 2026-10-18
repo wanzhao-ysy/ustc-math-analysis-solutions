@@ -864,9 +864,9 @@
 \begin{problem}{反函数的导数计算}{Derivative-Of-Inverse-Functions}
     求下列函数的反函数的微商：
     \begin{enumerate}
-        \item $y = x\e^x$；
+        \item $y = x^2 + 2\e^x$；
         \item $y = \arctan \frac{1}{x}$；
-        \item $y = 2\e^{-x} - \e^{-2x}$；
+        \item $y = 2x^{-x} - \e^{-2x}$；
         \item $y = \ln(\e^x + \sqrt{1+\e^{2x}})$．
     \end{enumerate}
 \end{problem}
@@ -876,14 +876,14 @@
 
     计算原函数的导数：
     \begin{equation}
-        \frac{\d y}{\d x} = \e^x + x\e^x = (1 + x)\e^x.
+        \frac{\d y}{\d x} = 2x + 2\e^x = 2(x + \e^x).
     \end{equation}
-    由反函数求导法则，当 $x \neq -1$ 时，
+    由反函数求导法则，当 $x + \e^x \neq 0$ 时，
     \begin{equation}
-        \frac{\d x}{\d y} = \frac{1}{\frac{\d y}{\d x}} = \frac{1}{(1+x)\e^x}.
+        \frac{\d x}{\d y} = \frac{1}{\frac{\d y}{\d x}} = \frac{1}{2(x + \e^x)}.
     \end{equation}
     \begin{equation}
-        \boxed{\frac{\d x}{\d y} = \frac{1}{(1+x)\e^x}.}
+        \boxed{\frac{\d x}{\d y} = \frac{1}{2(x + \e^x)}.}
     \end{equation}
 
     \ansitem{2}
@@ -902,16 +902,16 @@
 
     \ansitem{3}
 
-    计算原函数的导数：
+    对 $x > 0$，由于 $(x^{-x})' = (\e^{-x\ln x})' = -x^{-x}(1 + \ln x)$，计算原函数的导数：
     \begin{equation}
-        \frac{\d y}{\d x} = -2\e^{-x} + 2\e^{-2x} = 2\e^{-x}(\e^{-x} - 1).
+        \frac{\d y}{\d x} = -2x^{-x}(1 + \ln x) + 2\e^{-2x} = 2\bigl[ \e^{-2x} - x^{-x}(1 + \ln x) \bigr].
     \end{equation}
-    由反函数求导法则，当 $x \neq 0$ 时，
+    由反函数求导法则，当 $\e^{-2x} - x^{-x}(1 + \ln x) \neq 0$ 时，
     \begin{equation}
-        \frac{\d x}{\d y} = \frac{1}{\frac{\d y}{\d x}} = \frac{1}{2\e^{-2x} - 2\e^{-x}} = \frac{\e^{2x}}{2(1 - \e^x)}.
+        \frac{\d x}{\d y} = \frac{1}{\frac{\d y}{\d x}} = \frac{1}{2\bigl[ \e^{-2x} - x^{-x}(1 + \ln x) \bigr]}.
     \end{equation}
     \begin{equation}
-        \boxed{\frac{\d x}{\d y} = \frac{\e^{2x}}{2(1 - \e^x)}.}
+        \boxed{\frac{\d x}{\d y} = \frac{1}{2\bigl[ \e^{-2x} - x^{-x}(1 + \ln x) \bigr]}.}
     \end{equation}
 
     \ansitem{4}
