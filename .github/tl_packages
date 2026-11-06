@@ -94,6 +94,7 @@ biblatex-gb7714-2015
 # =========================================
 zref-clever
 hyperref
+nameref
 bookmark
 rerunfilecheck
 
